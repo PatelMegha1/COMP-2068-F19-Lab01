@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Let's PLay</title>
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Livvic&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="lab1.css">
+</head>
+<body>
+
+	
+	<div class="container">
+		<h1> Let's get started !!</h1>
+		<div class="button">
+			<button onclick="makeUserChoice('rock')" id="btn" id="rock"> ROCK</button>
+			<button onclick="makeUserChoice('paper')" id="btn" id="paper"> PAPER</button>
+			<button onclick="makeUserChoice('scissors')" id="btn" id="scissors"> SCISSORS </button>
+		</div>
+		<div class="result">
+			<div id="message"></div>
+		</div>
+
+		<div class="scoreboard">
+			<div id="score">
+				<p id="playerWins">  Your Score:<span id="playerScore">0</span></p>
+				<p  id="playerDraws"> Total Draws: <span id="draws">0</span></p>
+				<p  id="playerLosses">  Computer's Score: <span id="computerScore">0</span></p>
+			</div>
+		</div>
+		<p id="resetScore" onclick="resetGame()"> Reset Scores</p>
+	</div>
+	
+	<script type="text/javascript" src="lab1.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</body>
+</html>
