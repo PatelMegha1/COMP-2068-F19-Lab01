@@ -25,6 +25,7 @@ function makeUserChoice(userChoice) {
 	};
 	let resultMessage = 'Computer wins, try harder!';
 	if (userChoice == computerChoice) {
+		document.getElementById("computerChoice").innerHTML = `Computer choose: ` + computerChoice;
    document.getElementById("message").innerHTML = `You both tied, play again`;
     draws += 1;
 		console.log(draws);  console.log(playerScore);  console.log(computerScore); 
@@ -34,13 +35,15 @@ function makeUserChoice(userChoice) {
     (userChoice == "scissors" && computerChoice == "paper") ||
     (userChoice == "paper" && computerChoice == "rock")
   ) {
-    document.getElementById("message").innerHTML = `User wins, great job!`;
+  	document.getElementById("computerChoice").innerHTML = `Computer choose: ` + computerChoice;
+    document.getElementById("message").innerHTML = `You Win, great job!`;
     playerScore += 1;
      	console.log(draws);  console.log(playerScore);  console.log(computerScore); 
         document.getElementById("score").innerHTML = `playerWins: ${playerScore} playerDraws: ${draws} playerLosses: ${computerScore}`;  
   } else {
     computerScore += 1;
-    document.getElementById("message").innerHTML = `You Lost`;
+    document.getElementById("computerChoice").innerHTML = `Computer choose: ` + computerChoice;
+    document.getElementById("message").innerHTML = `Sorry!! You Lost`;
 		console.log(draws);  console.log(playerScore);  console.log(computerScore); 
  		document.getElementById("score").innerHTML = `playerWins: ${playerScore} playerDraws: ${draws} playerLosses: ${computerScore}`;
  		 }
@@ -52,4 +55,5 @@ function resetGame(){
 	computerScore = 0;
 	 document.getElementById("score").innerHTML = `playerWins: ${playerScore} playerDraws: ${draws} playerLosses: ${computerScore}`;
 	 document.getElementById("message").innerHTML = `Lets play again!!`;
+	 document.getElementById("computerChoice").innerHTML = ` Hey!! `;
 }
